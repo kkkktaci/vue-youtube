@@ -1,0 +1,27 @@
+:root {
+  --v-main-color: white;
+  --v-primary-color: white;
+  --v-icon-color: rgb(77, 77, 77);
+  --v-search-box-background: white;
+  --v-search-box-border-color: #ccc;
+  --v-search-box-button-icon-color: #333;
+
+  --v-top-bar-height: 56px;
+  --v-item-height: 40px;
+  --v-button-width: 40px;
+  --v-button-height: 40px;
+
+  --v-search-box-width: 728px;
+  --v-search-box-height: 36px; 
+
+  --v-app-drawer-width: 240px;
+}
+
+:root[data-theme=dark] {
+  --v-main-color: rgb(19, 19, 19);
+  --v-primary-color: rgb(24, 24, 24);
+  --v-icon-color: white;
+  --v-search-box-background: rgb(15, 15, 15);
+  --v-search-box-border-color: #252525;
+  --v-search-box-button-icon-color: #757575;
+}
