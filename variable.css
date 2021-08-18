@@ -19,7 +19,7 @@
 
 :root[data-theme=dark] {
   --v-main-color: rgb(19, 19, 19);
-  --v-primary-color: rgb(24, 24, 24);
+  --v-primary-color: rgb(33, 33, 33);
   --v-icon-color: white;
   --v-search-box-background: rgb(15, 15, 15);
   --v-search-box-border-color: #252525;

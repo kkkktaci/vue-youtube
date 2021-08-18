@@ -8,7 +8,7 @@
   .drawer {
     width: var(--v-app-drawer-width);
     height: 100%;
-    background-color: rosybrown;
+    background-color: var(--v-primary-color);
     z-index: 3;
     overflow-y: scroll;
   }
