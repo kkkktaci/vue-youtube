@@ -5,6 +5,12 @@
   --v-search-box-background: white;
   --v-search-box-border-color: #ccc;
   --v-search-box-button-icon-color: #333;
+  --v-drawer-divid-color: rgb(229, 229, 229);
+  --v-drawer-item-active: rgb(229, 229, 229);
+  --v-icon-inactive: #606060;
+
+  /* text */
+  --v-text-primary: #030303;
 
   --v-top-bar-height: 56px;
   --v-item-height: 40px;
@@ -15,6 +21,12 @@
   --v-search-box-height: 36px; 
 
   --v-app-drawer-width: 240px;
+  --v-app-drawer-item-height: 40px;
+
+  --v-text-comment-font-size: 14px;
+  --v-text-comment-font-weight: 400;
+  --v-text-comment-line-height: 16px;
+  --v-text-comment-letter-space: .2px;
 }
 
 :root[data-theme=dark] {
@@ -24,4 +36,17 @@
   --v-search-box-background: rgb(15, 15, 15);
   --v-search-box-border-color: #252525;
   --v-search-box-button-icon-color: #757575;
+  --v-drawer-divid-color: rgb(56, 56, 56);
+  --v-drawer-item-active: rgb(56, 56,56);
+  --v-icon-inactive: #909090;
+
+  /* text */
+  --v-text-primary: #fff;
+}
+
+.drawer-item-title {
+  font-size: var(--v-text-comment-font-size);
+  font-weight: var(--v-text-comment-font-weight);
+  line-height: var(--v-text-comment-line-height);
+  letter-spacing: var(--v-text-comment-letter-space);
 }
