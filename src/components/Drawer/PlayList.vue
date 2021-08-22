@@ -1,5 +1,14 @@
 <template>
   <div class="play-list-container" @click="toggle">
+    <div v-show="isExpand">
+      <Item
+        v-for="item in playList"
+        :key="item.id"
+        :title="item.title"
+      >
+        <img v-svg-inline src="@assets/play-list.svg" class="play-list-icon" />
+      </Item>
+    </div>
     <Item :title="buttonTitle">
       <div :class="iconStyle">
         <img v-svg-inline src="@assets/arrow.svg" class="arrow-icon" />
@@ -17,6 +26,8 @@ export default {
   },
   setup() {
     const isExpand = ref(false)
+    // TODO: get data from api
+    const playList = [{ id: 1, title: 'Cel Shader' }, { id: 2, title: 'Flutter' }, { id: 3, title: 'Gaming' }]
 
     const toggle = () => {
       isExpand.value = !isExpand.value
@@ -34,7 +45,8 @@ export default {
       isExpand,
       buttonTitle,
       iconStyle,
-      toggle
+      toggle,
+      playList
     }
   }
 }
@@ -56,5 +68,9 @@ export default {
     width: 24px;
     height: 24px;
     transform: rotate(180deg);
+  }
+  .play-list-icon {
+    fill: var(--v-icon-inactive);
+    stroke: var(--v-icon-inactive);
   }
 </style>
