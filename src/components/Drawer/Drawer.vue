@@ -29,6 +29,9 @@
       </Item>
       <PlayList />
     </Section>
+    <Section title="订阅内容">
+      <Subscription />
+    </Section>
   </div>
 </template>
 
@@ -36,12 +39,14 @@
 import Section from './DrawerSection.vue'
 import Item from './DrawerItem.vue'
 import PlayList from './PlayList.vue'
+import Subscription from './Subscription.vue'
 
 export default {
   components: {
     Section,
     Item,
-    PlayList
+    PlayList,
+    Subscription
   }
 }
 </script>

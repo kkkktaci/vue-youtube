@@ -11,6 +11,7 @@
 
   /* text */
   --v-text-primary: #030303;
+  --v-text-secondary: #606060;
 
   --v-top-bar-height: 56px;
   --v-item-height: 40px;
@@ -42,11 +43,19 @@
 
   /* text */
   --v-text-primary: #fff;
+  --v-text-secondary: #aaa;
 }
 
 .drawer-item-title {
   font-size: var(--v-text-comment-font-size);
   font-weight: var(--v-text-comment-font-weight);
+  line-height: var(--v-text-comment-line-height);
+  letter-spacing: var(--v-text-comment-letter-space);
+}
+
+.drawer-section-title {
+  font-size: var(--v-text-comment-font-size);
+  font-weight: 500;
   line-height: var(--v-text-comment-line-height);
   letter-spacing: var(--v-text-comment-letter-space);
 }
