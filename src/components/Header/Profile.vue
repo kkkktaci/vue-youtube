@@ -2,15 +2,9 @@
   <div class="end">
     <div class="avatar"></div>
     <div class="buttons">
-      <TopBarItem class="top-bar-item">
-        <img class="button-icon" v-svg-inline src="@assets/create.svg" />
-      </TopBarItem>
-      <TopBarItem class="top-bar-item">
-        <img class="button-icon" v-svg-inline src="@assets/applications.svg" />
-      </TopBarItem>
-      <TopBarItem class="top-bar-item">
-        <img class="button-icon" v-svg-inline src="@assets/notification.svg" />
-      </TopBarItem>
+      <TopBarItem class="top-bar-item" svgName="create"></TopBarItem>
+      <TopBarItem class="top-bar-item" svgName="applications"></TopBarItem>
+      <TopBarItem class="top-bar-item" svgName="notification"></TopBarItem>
     </div>
   </div>
 </template>
@@ -41,9 +35,6 @@ export default {
   }
   .buttons {
     margin-right: 8px;
-  }
-  .button-icon {
-    fill: var(--v-icon-color);
   }
   .top-bar-item {
     margin-right: 18px;

@@ -6,7 +6,7 @@
         :key="item.id"
         :title="item.title"
       >
-        <img v-if="!item.image" v-svg-inline src="@assets/play-list.svg" class="default-image" />
+        <SvgIcon v-if="!item.image" name="play-list" class="default-image" />
       </Item>
     </div>
     <div v-show="shouldRenderFoldedData">
@@ -15,22 +15,28 @@
         :key="item.id"
         :title="item.title"
       >
-        <img v-if="!item.image" v-svg-inline src="@assets/play-list.svg" class="default-image" />
+        <SvgIcon v-if="!item.image" name="play-list" class="default-image" />
       </Item>
     </div>
-    <Item :title="buttonTitle" @click="toggle" v-if="foldedData.length > 0">
-      <div :class="iconStyle">
-        <img v-svg-inline src="@assets/arrow.svg" class="arrow-icon" />
+    <div class="toggle-button-container" @click="toggle" v-if="foldedData.length > 0">
+      <div class="toggle-icon-container" :class="iconStyle">
+        <SvgIcon name="arrow" class="arrow-icon"></SvgIcon>
       </div>
-    </Item>
+      <span>
+        {{ buttonTitle }}
+      </span>
+    </div>
   </div>
 </template>
 
 <script>
 import { computed, ref } from 'vue'
+
+import SvgIcon from '@components/SvgIcon.vue'
 import Item from './DrawerItem.vue'
 export default {
   components: {
+    SvgIcon,
     Item
   },
   props: {
@@ -111,5 +117,21 @@ export default {
   .default-image {
     fill: var(--v-icon-inactive);
     stroke: var(--v-icon-inactive);
+  }
+  .toggle-button-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0 24px;
+    height: var(--v-app-drawer-item-height);
+    color: var(--v-text-primary);
+  }
+  .toggle-icon-container {
+    width: 24px;
+    height: 24px;
+    margin-right: 24px;
+  }
+  .toggle-button-container:hover {
+    background-color: var(--v-drawer-item-active);
   }
 </style>

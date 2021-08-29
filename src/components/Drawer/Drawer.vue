@@ -1,32 +1,16 @@
 <template>
   <div class="drawer">
     <Section>
-      <Item title="首页">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/home.svg" />
-      </Item>
-      <Item title="探索">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/discover.svg" />
-      </Item>
-      <Item title="订阅内容">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/subscription.svg" />
-      </Item>
+      <Item title="首页" svgName="home"></Item>
+      <Item title="探索" svgName="discover"></Item>
+      <Item title="订阅内容" svgName="subscription"></Item>
     </Section>
     <Section>
-      <Item title="媒体库">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/media.svg" />
-      </Item>
-      <Item title="历史记录">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/history.svg" />
-      </Item>
-      <Item title="您的视频">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/videos.svg" />
-      </Item>
-      <Item title="稍后观看">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/later.svg" />
-      </Item>
-      <Item title="顶过的视频">
-        <img class="drawer-item-icon" v-svg-inline src="@assets/like.svg" />
-      </Item>
+      <Item title="媒体库" svgName="media"></Item>
+      <Item title="历史记录" svgName="history"></Item>
+      <Item title="您的视频" svgName="videos"></Item>
+      <Item title="稍后观看" svgName="later"></Item>
+      <Item title="顶过的视频" svgName="like"></Item>
       <PlayList />
     </Section>
     <Section title="订阅内容">

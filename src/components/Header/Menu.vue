@@ -2,17 +2,25 @@
   <div class="start">
     <div class="guide-button">
       <button class="menu-button">
-        <img class="menu-icon" v-svg-inline src="@assets/menu.svg" />
+        <SvgIcon class="menu-icon" name="menu" />
       </button>
     </div>
     <a class="logo-container">
       <div class="logo">
-        <img class="logo-icon" v-svg-inline src="@assets/youtube-logo.svg" />
+        <SvgIcon class="logo-icon" :width="90" :height="20" name="youtube-logo" />
       </div>
       <span class="country-code">HK</span>
     </a>
   </div>
 </template>
+
+<script>
+import SvgIcon from '@components/SvgIcon.vue'
+
+export default {
+  components: { SvgIcon }
+}
+</script>
 
 <style scoped>
   .start {

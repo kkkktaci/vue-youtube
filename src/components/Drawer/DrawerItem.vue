@@ -1,7 +1,7 @@
 <template>
   <div class="drawer-item-container ">
     <div class="drawer-item-icon-container">
-      <slot></slot>
+      <slot><SvgIcon v-if="svgName" :name="svgName"></SvgIcon></slot>
     </div>
     <span class="drawer-item-title">
       {{ title }}
@@ -10,9 +10,21 @@
 </template>
 
 <script>
+import SvgIcon from '@components/SvgIcon.vue'
+
 export default {
+  components: {
+    SvgIcon
+  },
   props: {
-    title: String,
+    title: {
+      type: String,
+      required: true
+    },
+    svgName: {
+      type: String,
+      required: false
+    }
   }
 }
 </script>

@@ -4,15 +4,22 @@
       <form class="search-form" action='/results'>
         <input class="search-input" placeholder="搜索" />
         <button class="search-button">
-          <img class="search-button-icon" v-svg-inline src="@assets/search.svg" />
+          <SvgIcon class="search-button-icon" name="search" />
         </button>
       </form>
     </div>
     <button class="button mini-search">
-      <img class="mini-search-icon" v-svg-inline src="@assets/search.svg" />
+      <SvgIcon class="mini-search-icon" name="search" />
     </button>
   </div>
 </template>
+
+<script>
+import SvgIcon from '@components/SvgIcon.vue'
+export default {
+  components: { SvgIcon }
+}
+</script>
 
 <style scoped>
   .center {
