@@ -7,8 +7,6 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-
 import Header from './Header/Header.vue'
 import Drawer from './Drawer/Drawer.vue'
 import MainPage from './MainPage.vue'
