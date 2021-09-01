@@ -4,20 +4,15 @@
   </button>
 </template>
 
-<script>
+<script setup>
 import SvgIcon from '@components/SvgIcon.vue'
 
-export default {
-  components: {
-    SvgIcon,
-  },
-  props: {
-    svgName: {
-      type: String,
-      required: true
-    }
+defineProps({
+  svgName: {
+    type: String,
+    required: true
   }
-}
+})
 </script>
 
 <style scoped>

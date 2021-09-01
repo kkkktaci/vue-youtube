@@ -9,24 +9,19 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import SvgIcon from '@components/SvgIcon.vue'
 
-export default {
-  components: {
-    SvgIcon
+defineProps({
+  title: {
+    type: String,
+    required: true
   },
-  props: {
-    title: {
-      type: String,
-      required: true
-    },
-    svgName: {
-      type: String,
-      required: false
-    }
+  svgName: {
+    type: String,
+    required: false
   }
-}
+})
 </script>
 
 <style scoped>

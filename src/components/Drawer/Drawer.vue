@@ -19,20 +19,11 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Section from './DrawerSection.vue'
 import Item from './DrawerItem.vue'
 import PlayList from './PlayList.vue'
 import Subscription from './Subscription.vue'
-
-export default {
-  components: {
-    Section,
-    Item,
-    PlayList,
-    Subscription
-  }
-}
 </script>
 
 <style scoped>

@@ -14,12 +14,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import SvgIcon from '@components/SvgIcon.vue'
-
-export default {
-  components: { SvgIcon }
-}
 </script>
 
 <style scoped>

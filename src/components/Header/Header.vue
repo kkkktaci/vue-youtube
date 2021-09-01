@@ -6,18 +6,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Menu from './Menu.vue'
 import SearchBox from './SearchBox.vue'
 import Profile from './Profile.vue'
-
-export default {
-  components: {
-    Menu,
-    SearchBox,
-    Profile
-  }
-}
 </script>
 
 <style scoped>

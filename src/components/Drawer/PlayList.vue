@@ -2,19 +2,9 @@
   <Collapse :data="playList" />
 </template>
 
-<script>
+<script setup>
 import Collapse from './Collapse.vue'
-export default {
-  components: {
-    Collapse
-  },
-  setup() {
-    // TODO: get data from api
-    const playList = [{ id: 1, title: 'Cel Shader' }, { id: 2, title: 'Flutter' }, { id: 3, title: 'Gaming' }]
 
-    return {
-      playList
-    }
-  }
-}
+// TODO: get data from api
+const playList = [{ id: 1, title: 'Cel Shader' }, { id: 2, title: 'Flutter' }, { id: 3, title: 'Gaming' }]
 </script>

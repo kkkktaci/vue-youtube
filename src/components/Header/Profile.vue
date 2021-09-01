@@ -9,14 +9,8 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import TopBarItem from './TopBarItem.vue'
-
-export default {
-  components: {
-    TopBarItem
-  }
-}
 </script>
 
 <style scoped>

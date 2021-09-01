@@ -4,30 +4,25 @@
   </svg>
 </template>
 
-<script>
-import { defineComponent, computed } from 'vue';
+<script setup>
+import { computed } from 'vue';
 
-export default defineComponent({
-  name: 'SvgIcon',
-  props: {
-    name: {
-      type: String,
-      required: true,
-    },
-    width: {
-      type: Number,
-      default: 24
-    },
-    height: {
-      type: Number,
-      default: 24
-    },
+const props = defineProps({
+  name: {
+    type: String,
+    required: true,
   },
-  setup(props) {
-    const symbolId = computed(() => `#${props.name}`)
-    return { symbolId }
+  width: {
+    type: Number,
+    default: 24
+  },
+  height: {
+    type: Number,
+    default: 24
   },
 })
+
+const symbolId = computed(() => `#${props.name}`)
 </script>
 
 <style scoped>

@@ -29,72 +29,56 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { computed, ref } from 'vue'
 
 import SvgIcon from '@components/SvgIcon.vue'
 import Item from './DrawerItem.vue'
-export default {
-  components: {
-    SvgIcon,
-    Item
+
+const props = defineProps({
+  data: {
+    type: Array,
+    required: true
   },
-  props: {
-    data: {
-      type: Array,
-      required: true
-    },
-    showCount: {
-      type: Number,
-      default: 0,
-      validator(value) {
-        return value >= 0
-      }
-    }
-  },
-  setup(props) {
-    const isExpand = ref(false)
-
-    const toggle = () => {
-      isExpand.value = !isExpand.value
-    }
-
-    const buttonTitle = computed(() => {
-      return isExpand.value ? '隐藏部分内容' : '展开'
-    })
-
-    const iconStyle = computed(() => {
-      return isExpand.value ? 'arrow-icon-expand' : 'arrow-icon-expand-not'
-    })
-
-    const showData = computed(() => {
-      if (props.showCount === 0) return []
-      return props.data.slice(0, props.showCount)
-    })
-
-    const foldedData = computed(() => {
-      return props.data.slice(props.showCount)
-    })
-
-    const shouldRenderShowData = computed(() => {
-      return showData.value.length > 0
-    })
-
-    const shouldRenderFoldedData = computed(() => {
-      return isExpand.value && foldedData.value.length > 0
-    })
-
-    return {
-      buttonTitle,
-      iconStyle,
-      toggle,
-      shouldRenderShowData,
-      shouldRenderFoldedData,
-      showData,
-      foldedData
+  showCount: {
+    type: Number,
+    default: 0,
+    validator(value) {
+      return value >= 0
     }
   }
+})
+
+const isExpand = ref(false)
+
+const toggle = () => {
+  isExpand.value = !isExpand.value
 }
+
+const buttonTitle = computed(() => {
+  return isExpand.value ? '隐藏部分内容' : '展开'
+})
+
+const iconStyle = computed(() => {
+  return isExpand.value ? 'arrow-icon-expand' : 'arrow-icon-expand-not'
+})
+
+const showData = computed(() => {
+  if (props.showCount === 0) return []
+  return props.data.slice(0, props.showCount)
+})
+
+const foldedData = computed(() => {
+  return props.data.slice(props.showCount)
+})
+
+const shouldRenderShowData = computed(() => {
+  return showData.value.length > 0
+})
+
+const shouldRenderFoldedData = computed(() => {
+  return isExpand.value && foldedData.value.length > 0
+})
 </script>
 
 <style scoped>

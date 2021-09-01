@@ -6,19 +6,10 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import Header from './Header/Header.vue'
 import Drawer from './Drawer/Drawer.vue'
 import MainPage from './MainPage.vue'
-
-export default {
-  components: {
-    Header,
-    Drawer,
-    MainPage
-  }
-}
-
 </script>
 
 <style scoped>
