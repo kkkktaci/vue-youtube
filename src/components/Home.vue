@@ -9,7 +9,7 @@
 <script setup>
 import Header from './Header/Header.vue'
 import Drawer from './Drawer/Drawer.vue'
-import MainPage from './MainPage.vue'
+import MainPage from './MainPage/MainPage.vue'
 </script>
 
 <style scoped>

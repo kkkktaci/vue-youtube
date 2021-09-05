@@ -1,6 +1,12 @@
 <template>
-  <div class="main-page"></div>
+  <div class="main-page">
+    <Header></Header>
+  </div>
 </template>
+
+<script setup>
+import Header from './Header/Header.vue'
+</script>
 
 <style scoped>
   .main-page {
