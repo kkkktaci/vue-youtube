@@ -7,6 +7,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
+    "numbro": "^2.3.5",
     "vue": "^3.2.4"
   },
   "devDependencies": {

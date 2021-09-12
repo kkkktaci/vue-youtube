@@ -10,8 +10,12 @@
   --v-icon-inactive: #606060;
   --v-pill-background: rgb(242, 242, 242);
   --v-pill-select-background: black;
+  --v-contents-background: white;
 
   --v-mini-max-width: 1330px;
+
+  --v-content-items-per-row: 4;
+  --v-content-items-margin: 16px;
 
   /* text */
   --v-text-primary: #030303;
@@ -53,6 +57,7 @@
   --v-icon-inactive: #909090;
   --v-pill-background: rgb(55, 55, 55);
   --v-pill-select-background: white;
+  --v-contents-background: rgb(24, 24, 24);
 
   /* text */
   --v-text-primary: #fff;
@@ -80,4 +85,16 @@
   font-weight: 500;
   line-height: var(--v-text-comment-line-height);
   letter-spacing: var(--v-text-comment-letter-space);
+}
+
+@media screen and (max-width: 1100px) {
+  :root {
+    --v-content-items-per-row: 3;
+  }
+}
+
+@media screen and (max-width: 880px) {
+  :root {
+    --v-content-items-per-row: 2;
+  }
 }
